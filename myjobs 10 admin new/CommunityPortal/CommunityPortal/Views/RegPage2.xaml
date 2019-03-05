@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CommunityPortal.Views.RegPage2"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <Grid>
+            <Image Aspect="AspectFill" Source= "https://www.codeproject.com/KB/mobile/439871/BackgroundImage.png"/>
+            <ScrollView>
+                <StackLayout Spacing="20" VerticalOptions="Center" Margin="20,0,20,0">
+
+
+                    <Picker x:Name="ServiceType" Title="Select Service Type">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>Electrician</x:String>
+                                <x:String>Carpenter</x:String>
+                                <x:String>plumbery</x:String>
+                                <x:String>Cleaner</x:String>
+                                <x:String>Contractor</x:String>
+
+
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                
+
+
+                    <Entry x:Name="passwordEntry" 
+				   Placeholder="Password"
+				   IsPassword="True"/>
+
+                    <Entry x:Name="passwordEntry2" 
+				   Placeholder="Re-Enter Password"
+				   IsPassword="True"/>
+
+
+
+
+                    <Button Text="Register" 
+					x:Name="LoginBtn"
+					Clicked="RegBtn1_Clicked"
+					CornerRadius="10"
+                    BackgroundColor="DeepSkyBlue"/>
+
+
+
+
+                </StackLayout>
+            </ScrollView>
+            <ActivityIndicator x:Name="activityIndicator"
+                               IsRunning="{Binding IsBusy}"
+                               VerticalOptions="Center"
+                               HorizontalOptions="Center"
+                               Color="DeepSkyBlue"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

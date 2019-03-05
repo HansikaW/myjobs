@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CommunityPortal.Views.QuotationTabbedPage">
+  <!--Pages can be added as references or inline-->
+    <ContentPage Title="Received" >
+
+        <Grid>
+            <Image Aspect="AspectFill" Source= "https://www.codeproject.com/KB/mobile/439871/BackgroundImage.png"/>
+            <StackLayout>
+          
+
+               
+
+                <Label Text="Received Quotation" 
+                    FontSize="Medium"
+                   XAlign="Center" />
+
+
+
+
+
+
+
+
+            <ListView x:Name="RQuotationView" ItemSelected="Select_Receiced_Quotation" HasUnevenRows="true">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding}" />
+
+
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+
+
+
+
+                
+
+
+        </StackLayout>
+
+
+
+        </Grid>
+
+    </ContentPage>
+    
+    
+    <ContentPage Title="Send">
+
+
+        <ContentPage.Content>
+            <Grid>
+                <Image Aspect="AspectFill" Source= "https://www.codeproject.com/KB/mobile/439871/BackgroundImage.png"/>
+                <StackLayout>
+                
+                    
+
+
+
+                    <Label Text="Sent Quotation" 
+                    FontSize="Medium"
+                   XAlign="Center" />
+
+
+
+
+                    <ListView x:Name="SQuotationView" ItemSelected="Select_Quotation" HasUnevenRows="true">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <TextCell Text="{Binding}" 
+                                     />
+
+
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+
+
+
+
+
+
+
+               
+            </StackLayout>
+
+
+            </Grid>
+        </ContentPage.Content>
+
+    </ContentPage>
+    
+</TabbedPage>

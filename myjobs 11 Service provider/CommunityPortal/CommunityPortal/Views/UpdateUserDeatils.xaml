@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CommunityPortal.Views.UpdateUserDeatils">
+
+    <ContentPage.Content>
+        <Grid>
+            <Image Aspect="AspectFill" Source= "https://www.codeproject.com/KB/mobile/439871/BackgroundImage.png"/>
+            <ScrollView>
+                <StackLayout Spacing="20" VerticalOptions="Center" Margin="20,0,20,0">
+
+                    <Entry x:Name="FirstName" 
+				   Placeholder="First Name"/>
+
+                    <Entry x:Name="LastName" 
+				   Placeholder="Last Name"/>
+
+                    <Entry x:Name="Email" 
+				   Placeholder="Email"/>
+
+                    <Entry x:Name="Address" 
+				   Placeholder="Address"/>
+
+                    <Entry x:Name="PhoneNumber" 
+				   Placeholder="Telephone No"/>
+
+                    <Picker x:Name="ServiceType" Title="Select Service Type">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>Electrician</x:String>
+                                <x:String>Carpenter</x:String>
+                                <x:String>plumbery</x:String>
+                                <x:String>Cleaner</x:String>
+                                <x:String>Contractor</x:String>
+
+
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+
+
+
+                    <Button Text="Update Dtails" 
+					x:Name="AddAccount"
+					Clicked="updatebtn"
+					CornerRadius="10"
+                    BackgroundColor="DeepSkyBlue"/>
+
+
+
+
+
+
+
+
+                </StackLayout>
+                
+            </ScrollView>
+            <ActivityIndicator x:Name="activityIndicator"
+                               IsRunning="{Binding IsBusy}"
+                               VerticalOptions="Center"
+                               HorizontalOptions="Center"
+                               Color="DeepSkyBlue"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

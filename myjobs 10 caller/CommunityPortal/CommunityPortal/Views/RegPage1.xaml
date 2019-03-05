@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CommunityPortal.Views.RegPage1"
+             NavigationPage.HasNavigationBar="False">
+
+    <ContentPage.Content>
+        <Grid>
+            <Image Aspect="AspectFill" Source= "https://www.codeproject.com/KB/mobile/439871/BackgroundImage.png"/>
+            <ScrollView>
+                <StackLayout Spacing="20" VerticalOptions="Center" Margin="20,0,20,0">
+
+                    <Entry x:Name="FirstName" 
+				   Placeholder="First Name"/>
+
+                    <Entry x:Name="LastName" 
+				   Placeholder="Last Name"/>
+
+                    <Entry x:Name="Email" 
+				   Placeholder="Email"/>
+
+                    
+                    <Entry x:Name="PhoneNumber" 
+				   Placeholder="Telephone No"/>
+
+                 
+
+                    <Button Text="Next" 
+					x:Name="LoginBtn"
+					Clicked="NextBtn"
+					CornerRadius="10"
+                    BackgroundColor="DeepSkyBlue"/>
+
+
+
+
+                </StackLayout>
+            </ScrollView>
+            <ActivityIndicator x:Name="activityIndicator"
+                               IsRunning="{Binding IsBusy}"
+                               VerticalOptions="Center"
+                               HorizontalOptions="Center"
+                               Color="DeepSkyBlue"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

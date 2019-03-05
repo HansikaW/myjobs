@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CommunityPortal.LoginPage"
+			 NavigationPage.HasNavigationBar="False">
+
+
+    <ContentPage.Content>
+        <Grid>
+            <Image Aspect="AspectFill" Source= "https://png.pngtree.com/thumb_back/fw800/back_pic/04/43/02/19585258812aef2.jpg"/>
+            <ScrollView>
+                <StackLayout Spacing="20" VerticalOptions="Center" Margin="20,0,20,0">
+                    <Image x:Name="logo"
+				   Aspect="AspectFit"
+				   WidthRequest="200" 
+				   HeightRequest="200"/>
+
+                    <Entry  PlaceholderColor="white" x:Name="usernameEntry" 
+				   Placeholder="Email"/>
+                    <Entry  PlaceholderColor="white" x:Name="passwordEntry" 
+				   Placeholder="Password"
+				   IsPassword="True"/>
+
+
+
+
+                    <Button Text="Login" 
+					x:Name="LoginBtn"
+					Clicked="LoginBtn_Clicked"
+					CornerRadius="10"
+					BackgroundColor="DarkGray"
+                      Opacity="0.4"  />
+
+
+
+                </StackLayout>
+            </ScrollView>
+
+            <ActivityIndicator x:Name="activityIndicator"
+                               IsRunning="{Binding IsBusy}"
+                               VerticalOptions="Center"
+                               HorizontalOptions="Center"
+                               Color="DeepSkyBlue"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CommunityPortal.Views.SendQuotation">
+
+    <ContentPage.Content>
+        <Grid>
+            <Image Aspect="AspectFill" Source= "https://www.codeproject.com/KB/mobile/439871/BackgroundImage.png"/>
+            <ScrollView>
+                <StackLayout Spacing="5" VerticalOptions="Center" Margin="5,0,5,0">
+
+                    <Entry x:Name="Subject" 
+				   Placeholder="Subject"/>
+
+                    <Entry x:Name="Description" 
+				   Placeholder="Description"/>
+                    <Label Text="" />
+                    
+
+
+                    <Entry x:Name="WorkPlace" 
+                           IsEnabled="False"
+				   Placeholder="WorkPlace"/>
+
+                <Label Text="" />
+                    
+
+                    <Entry x:Name="EstimatedServiceFee" 
+                    TextChanged="servicefesschanged"
+				   Placeholder="Estimated Service Fee"/>
+
+                    <Entry x:Name="EstimatedOtherFee" 
+                     TextChanged="otherfesschanged"
+				   Placeholder="Estimated Other Fee"/>
+
+                    <Entry x:Name="EstimatedTotal"
+                     IsEnabled="False"
+				   Placeholder="Estimated Total Fee"/>
+
+
+
+                    <Button Text="Send Quotation" 
+                    
+					x:Name="sendQuotation"
+					Clicked="Send_Quotation"
+					CornerRadius="10"
+					BackgroundColor="DeepSkyBlue"
+                    Opacity="0.5"  />
+
+
+
+                </StackLayout>
+            </ScrollView>
+            <ActivityIndicator x:Name="activityIndicator"
+                               IsRunning="{Binding IsBusy}"
+                               VerticalOptions="Center"
+                               HorizontalOptions="Center"
+                               Color="DeepSkyBlue"/>
+        </Grid>
+    </ContentPage.Content>
+
+
+</ContentPage>

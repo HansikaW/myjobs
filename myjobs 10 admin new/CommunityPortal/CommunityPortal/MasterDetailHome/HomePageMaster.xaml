@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CommunityPortal.MasterDetailHome.HomePageMaster"
+             Title="Master">
+    
+    
+    <StackLayout>
+        <StackLayout>
+  
+            <Frame BackgroundColor="Green">
+                <Label 
+              HorizontalOptions="CenterAndExpand"
+              Grid.Column="1"
+              Grid.Row="2"
+              Text="MyJobs"
+              TextColor="Black"
+			  Font="Lobster,20"
+              Style="{DynamicResource SubtitleStyle}"/>
+            </Frame>
+        </StackLayout>
+
+
+        <ListView x:Name="MenuItemsListView"
+              RowHeight="55"
+              SeparatorVisibility="None"
+              BackgroundColor="Silver"
+              HasUnevenRows="true"
+              ItemsSource="{Binding MenuItems}">
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Padding="15,10" HorizontalOptions="FillAndExpand">
+                            <Label VerticalOptions="FillAndExpand" 
+                    VerticalTextAlignment="Center" 
+                    Text="{Binding Title}" 
+                    FontSize="20"
+                     FontAttributes="Bold"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CommunityPortal.Views.SendWorkOrder">
+
+
+    <ContentPage.Content>
+        <Grid>
+            <Image Aspect="AspectFill" Source= "https://www.codeproject.com/KB/mobile/439871/BackgroundImage.png"/>
+            <ScrollView>
+                <StackLayout Spacing="5" VerticalOptions="Center" Margin="5,0,5,0">
+
+                    <Entry x:Name="Subject" 
+				   Placeholder="Subject"/>
+                 <Label Text="" />
+
+                          <Entry x:Name="Description" 
+				   Placeholder="Description"/>
+                 <Label Text="" />
+
+
+
+                    <Label Text="Workplace" />
+                    <Entry x:Name="Workplace" 
+				   Placeholder="Workplace"/>
+                    <Label Text="" />
+
+
+
+
+                    <Label Text="Service providr :-" />
+
+                    <Entry x:Name="ServiceProviderID" 
+                           IsEnabled="False"
+				   Placeholder="Service Provider"/>
+                    
+            <Label Text="" />
+
+                    <Label Text="Due Date" />
+                    <DatePicker x:Name="DueDate"  />
+
+
+
+                    <Button Text="Send Order" 
+					x:Name="Sorder"
+					Clicked="sendOrder"
+					CornerRadius="10"
+                    BackgroundColor="DeepSkyBlue"/>
+
+
+
+
+                </StackLayout>
+            </ScrollView>
+            <ActivityIndicator x:Name="activityIndicator"
+                               IsRunning="{Binding IsBusy}"
+                               VerticalOptions="Center"
+                               HorizontalOptions="Center"
+                               Color="DeepSkyBlue"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

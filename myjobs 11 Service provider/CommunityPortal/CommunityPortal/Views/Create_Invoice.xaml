@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CommunityPortal.Views.Create_Invoice">
+
+    <ContentPage.Content>
+        <Grid>
+            <Image Aspect="AspectFill" Source= "https://www.codeproject.com/KB/mobile/439871/BackgroundImage.png"/>
+            <ScrollView>
+                <StackLayout Spacing="5" VerticalOptions="Center" Margin="5,0,5,0">
+
+                    <Entry x:Name="Subject" 
+				   Placeholder="Subject"/>
+
+
+                    <Entry x:Name="WorkPlace" 
+				   Placeholder="Place"/>
+
+
+                    <Entry x:Name="Description" 
+				   Placeholder="Description"/>
+
+                    <Entry x:Name="ServiceFee" 
+                    TextChanged="servicefesschanged"
+				   Placeholder="ServiceFee"/>
+
+                    <Entry x:Name="OtherFee" 
+                     TextChanged="otherfesschanged"
+				   Placeholder="Other Fees"/>
+
+                    <Entry x:Name="Total"
+                     IsEnabled="False"
+				   Placeholder="Total"/>
+
+
+
+                    <Button Text="Send Invoice" 
+					x:Name="SInvoice"
+					Clicked="Send_Invoicebtn"
+					CornerRadius="10"
+                    BackgroundColor="DeepSkyBlue"/>
+
+
+
+
+                </StackLayout>
+            </ScrollView>
+            <ActivityIndicator x:Name="activityIndicator"
+                               IsRunning="{Binding IsBusy}"
+                               VerticalOptions="Center"
+                               HorizontalOptions="Center"
+                               Color="DeepSkyBlue"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

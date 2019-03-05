@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CommunityPortal.Views.SendQuotation">
+    
+    
+    <ContentPage.Content>
+        <Grid>
+            <Image Aspect="AspectFill" Source= "https://www.codeproject.com/KB/mobile/439871/BackgroundImage.png"/>
+            <ScrollView>
+                <StackLayout Spacing="5" VerticalOptions="Center" Margin="5,0,5,0">
+
+                    <Entry x:Name="Subject" 
+				   Placeholder="Subject"/>
+
+                    <Entry x:Name="Description" 
+				   Placeholder="Description"/>
+<Label Text="" />
+
+                    <Label Text="service Type" />
+                    <Entry x:Name="servicetype" 
+                           IsEnabled="False"
+				   Placeholder="Servicetype"/>
+                    
+                    
+
+                    <Label Text="Work Place" />
+                    <Entry x:Name="WorkPlace" 
+                           IsEnabled="False"
+				   Placeholder="WorkPlace"/>
+
+
+
+                    <Label Text="Estimated ServiceFee" />
+                    <Entry x:Name="EstimatedServiceFee" 
+                    TextChanged="servicefesschanged"
+				   Placeholder="Estimated Service Fee"/>
+
+
+                    <Label Text="Due Date " />
+                    <Entry x:Name="duedate" 
+                           IsEnabled="False"
+				   Placeholder="duedate"/>
+
+
+
+
+
+
+
+
+
+                    <Button Text="Send Quotation" 
+                    
+					x:Name="sendQuotation"
+					Clicked="Send_Quotation"
+					CornerRadius="10"
+					BackgroundColor="Blue"
+                    Opacity="0.5"  />
+
+
+
+                </StackLayout>
+            </ScrollView>
+            <ActivityIndicator x:Name="activityIndicator"
+                               IsRunning="{Binding IsBusy}"
+                               VerticalOptions="Center"
+                               HorizontalOptions="Center"
+                               Color="DeepSkyBlue"/>
+        </Grid>
+    </ContentPage.Content>
+
+
+</ContentPage>

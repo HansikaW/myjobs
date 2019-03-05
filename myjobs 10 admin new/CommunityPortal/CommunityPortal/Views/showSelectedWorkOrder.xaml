@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CommunityPortal.Views.showSelectedWorkOrder">
+    <ContentPage.Content>
+        <StackLayout>
+            
+
+                <Label x:Name="welcome" 
+                   Text="WorkOrder Details"
+                    FontSize="Large"
+                   XAlign="Center" />
+
+
+            <Entry Placeholder="" IsEnabled="False" />
+
+
+
+            <Label x:Name="lb1" Text="{Binding}"
+                 XAlign="Start" FontSize="Medium"  TextColor="DarkCyan"/>
+
+            <Label x:Name="lb2" Text="{Binding}"
+                 XAlign="Start" FontSize="Medium"  TextColor="DarkCyan"/>
+
+            <Label x:Name="lb3" Text="{Binding}"
+                 XAlign="Start" FontSize="Medium"  TextColor="DarkCyan"/>
+
+            <Label x:Name="lb4" Text="{Binding}"
+                 XAlign="Start" FontSize="Medium"  TextColor="DarkCyan"/>
+
+            <Label x:Name="lb5" Text="{Binding}"
+                 XAlign="Start" FontSize="Medium"  TextColor="DarkCyan"/>
+
+
+
+
+
+
+
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

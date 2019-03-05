@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CommunityPortal.MasterDetailHome.HomePageDetail"
+             Title="Home">
+
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+          
+            <Frame>
+                <StackLayout BackgroundColor="LightGray" >
+                    <Label FontSize="Medium" FontAttributes="Bold" HorizontalOptions="Center">
+                        Welcome MyJobs
+                    </Label>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                        <Image Source="person.png"></Image>
+                        <Label x:Name="nameis" Text="{Binding}">
+                           
+                        </Label>
+                       
+                    </StackLayout>
+
+                </StackLayout>
+
+            </Frame>
+
+
+            <Frame>
+                <StackLayout Spacing="6"  BackgroundColor="LightSeaGreen" >
+                    <Label FontSize="Medium" FontAttributes="Bold" HorizontalOptions="Center">
+                        Task Information
+                    </Label>
+
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+
+                        <Label Text="You have added "/>
+                        <Label x:Name="qno" Text="{Binding}"/>
+                        <Label Text="task "/>
+                        
+                    </StackLayout>
+
+
+                   
+                    <Label HorizontalOptions="Center">
+                        
+                    </Label>
+                </StackLayout>
+            </Frame>
+
+
+
+
+          
+
+
+
+          
+
+
+
+
+
+
+
+        </StackLayout>
+
+        </ScrollView>
+
+
+    </ContentPage.Content>
+
+</ContentPage>

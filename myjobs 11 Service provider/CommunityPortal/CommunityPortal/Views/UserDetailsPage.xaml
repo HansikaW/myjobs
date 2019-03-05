@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CommunityPortal.Views.UserDetailsPage">
+
+
+    <ContentPage.Content>
+       
+        
+            <ScrollView>
+            
+
+            <StackLayout BackgroundColor="Lavender">
+                
+
+
+                <Frame>
+                    <StackLayout>
+                      
+                        <Label TextColor="Black"
+                                Font="thin, 20"
+                                FlexLayout.AlignSelf="Start" 
+                                HorizontalOptions="Center" x:Name="welcome4">
+                        </Label>
+                        <Label TextColor="Black"
+                                Font="thin, 20"
+                                FlexLayout.AlignSelf="Start" 
+                                HorizontalOptions="Center" x:Name="welcome6">
+                        </Label>
+
+                        <Frame>
+                            <StackLayout>
+                                <Label TextColor="DarkCyan"
+                                       Font="thin, 25"
+                                       FlexLayout.AlignSelf="Start" 
+                                       HorizontalOptions="Center">
+                                    User details
+                                </Label>
+
+
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+
+                                    <Label TextColor="Black" Text="Name :-"
+                                           Font="thin, 15"
+                                           FlexLayout.AlignSelf="Start" 
+                                            />
+
+                                    <Label TextColor="Brown" 
+                                           Font="thin, 15"
+                                           FlexLayout.AlignSelf="Start" 
+                                          x:Name="name" />
+
+                                </StackLayout>
+
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+
+                                    <Label TextColor="Black" Text="Email :-"
+                                           Font="thin, 15"
+                                           FlexLayout.AlignSelf="Start" 
+                                             />
+
+                                    <Label TextColor="Brown" 
+                                           Font="thin, 15"
+                                           FlexLayout.AlignSelf="Start" 
+                                           x:Name="Email" />
+
+                                </StackLayout>
+
+
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+
+                                    <Label TextColor="Black" Text="Address :-"
+                                           Font="thin, 15"
+                                           FlexLayout.AlignSelf="Start" 
+                                           />
+
+                                    <Label TextColor="Brown" 
+                                           Font="thin, 15"
+                                           FlexLayout.AlignSelf="Start" 
+                                           x:Name="Address" />
+
+                                </StackLayout>
+
+
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+
+                                    <Label TextColor="Black" Text="Phone Number :-"
+                                           Font="thin, 15"
+                                           FlexLayout.AlignSelf="Start" 
+                                          />
+
+                                    <Label TextColor="Brown" 
+                                           Font="thin, 15"
+                                           FlexLayout.AlignSelf="Start" 
+                                           x:Name="PhoneNumber" />
+
+                                </StackLayout>
+
+
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+
+                                    <Label TextColor="Black" Text="Service Type :-"
+                                           Font="thin, 15"
+                                           FlexLayout.AlignSelf="Start" 
+                                          />
+
+                                    <Label TextColor="Brown" 
+                                           Font="thin, 15"
+                                           FlexLayout.AlignSelf="Start" 
+                                         x:Name="ServiceType1" />
+
+                                </StackLayout>
+                            
+                               
+                            </StackLayout>
+
+                        </Frame>
+
+                        <Button Text="Update Profile"
+                            CornerRadius="10"
+                            BackgroundColor="Turquoise"
+                            x:Name="RegBtn1"
+                            Clicked="RegBtn1_Clicked"/>
+
+                        <Label Text="" />
+                        
+                        <Button Text="Update Password"
+                            CornerRadius="10"
+                            BackgroundColor="Turquoise"
+                            x:Name="RegBtn12"
+                            Clicked="updatepass_Clicked"/>
+
+
+
+                    </StackLayout>
+      
+        </Frame>
+            </StackLayout>
+        </ScrollView>
+      
+        
+    </ContentPage.Content>
+</ContentPage>

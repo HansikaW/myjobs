@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CommunityPortal.Views.ShowSelectedQuotation">
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid>
+                <Image Aspect="AspectFill" Source= "https://www.codeproject.com/KB/mobile/439871/BackgroundImage.png"/>
+
+                <Label x:Name="welcome" 
+                   Text="Quotation Details"
+                    FontSize="Large"
+                   XAlign="Center" />
+
+
+            <Entry Placeholder="" IsEnabled="False" />
+
+
+
+            <Label x:Name="lb1" Text="{Binding}"
+                 XAlign="Start" FontSize="Medium"  TextColor="DarkCyan"/>
+
+            <Label x:Name="lb2" Text="{Binding}"
+                 XAlign="Start" FontSize="Medium"  TextColor="DarkCyan"/>
+
+            <Label x:Name="lb3" Text="{Binding}"
+                 XAlign="Start" FontSize="Medium"  TextColor="DarkCyan"/>
+
+            <Label x:Name="lb4" Text="{Binding}"
+                 XAlign="Start" FontSize="Medium"  TextColor="DarkCyan"/>
+
+            <Label x:Name="lb5" Text="{Binding}"
+                 XAlign="Start" FontSize="Medium"  TextColor="DarkCyan"/>
+
+            <Label x:Name="lb6" Text="{Binding}"
+                 XAlign="Start" FontSize="Medium"  TextColor="DarkCyan"/>
+
+            <Label x:Name="lb7" Text="{Binding}"
+                 XAlign="Start" FontSize="Medium"  TextColor="DarkCyan"/>
+
+            <Label x:Name="lb8" Text="{Binding}"
+                 XAlign="Start" FontSize="Medium"  TextColor="DarkCyan"/>
+
+
+
+            </Grid>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

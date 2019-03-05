@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CommunityPortal.Views.InvoicePage">
+    
+    
+    <ContentPage.Content>
+        <Grid>
+            <Image Aspect="AspectFill" Source= "https://www.codeproject.com/KB/mobile/439871/BackgroundImage.png"/>
+            <StackLayout>
+
+
+
+                <Button Text="Create Invoice" 
+                    
+					x:Name="Invoicebtn"
+					Clicked="Create_Invoice"
+					CornerRadius="10"
+                    Opacity="20"
+					BackgroundColor="DeepSkyBlue"/>
+
+
+
+
+
+
+
+                <ListView HasUnevenRows="true" x:Name="EmployeeView" ItemSelected="Select_invoice">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextCell Text="{Binding}" 
+                                      />
+
+
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+
+
+
+
+
+
+
+            </StackLayout>
+            </Grid>
+    </ContentPage.Content>
+ 
+</ContentPage>

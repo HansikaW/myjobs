@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CommunityPortal.Views.WorkOrders">
+    <ContentPage.Content>
+        <Grid>
+            <Image Aspect="AspectFill" Source= "https://www.codeproject.com/KB/mobile/439871/BackgroundImage.png"/>
+            <StackLayout>
+
+            <Label Text="Your Work Orders" 
+                    FontSize="Medium"
+                   FontAttributes="Bold"
+                   XAlign="Center" />
+
+            <Entry Placeholder="" IsEnabled="False" />
+
+
+            <ListView x:Name="workorders" ItemSelected="Select_workorder" HasUnevenRows="true">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding}" />
+
+
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+
+
+
+
+        </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

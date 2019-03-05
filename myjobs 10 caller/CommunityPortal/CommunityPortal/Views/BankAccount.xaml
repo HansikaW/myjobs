@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CommunityPortal.Views.BankAccount">
+    <ContentPage.Content>
+        <Grid>
+            <Image Aspect="AspectFill" Source= "https://www.codeproject.com/KB/mobile/439871/BackgroundImage.png"/>
+            <StackLayout>
+
+    
+
+                <ListView HasUnevenRows="true" x:Name="bankaccount" ItemSelected="Select_account">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding}" 
+                                      />
+
+
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+
+
+            <Button Text="Add Account" 
+                    
+					x:Name="addbtn"
+					Clicked="addaccount"
+					CornerRadius="10"
+                    Opacity="20"
+					BackgroundColor="DeepSkyBlue"/>
+
+
+
+
+        </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
